@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home</title>
+</head>
+<body>
+    <h1>Welcome to DealMapper's Scrapers!</h1>
+    <p>Please input the username of the account that you would like to scrape below:</p>
+    <p>
+        <input type="text" name="username" id="username" placeholder="username" />
+        <button id="submit">Submit</button>
+    </p>
+    <script src="{{ url_for('static',filename='scripts/scrape.js') }}"></script>
+    <p id="message"></p>
+</body>

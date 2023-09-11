@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Account information</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/main.css') }}">
+</head>
+<body>
+    <h1>List of Posts</h1>
+    <div class="post-list-container">
+    {% for item in scraped_details %}
+        <div class="post-container">
+            <p class="no-margin">
+                <a href="https://www.instagram.com{{ item[0] }}">
+                    Link to Instagram page
+                </a>
+            </p>
+            <p class="no-margin">
+                <a href="{{ item[2] }}">
+                    Link to Image
+                </a>
+<!--                <img src="{{ item[2] }}" decoding="auto" crossorigin="anonymous" alt="Image">-->
+            </p>
+            <h3 class="no-margin">Description:</h3>
+            <p class="no-margin">
+                {{ item[1] }}
+            </p>
+        </div>
+    {% endfor %}
+    </div>
+</body>
+</html>
